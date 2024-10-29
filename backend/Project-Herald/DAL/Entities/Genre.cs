@@ -16,5 +16,7 @@ namespace DAL.Entities
 		public string Name { get; set; }
 		// Description of the genre
 		public string Description { get; set; }
+
+		public ICollection<Piece> Pieces { get; set; }
 	}
 }
