@@ -10,6 +10,10 @@ namespace DAL.Entities
 	{
 		public string ID { get; set; }
 		// Name of the era
+		public string Name { get; set; }
 		// Description of the era
-	}
+		public string Description { get; set; }
+
+        public ICollection<Composer> Composers { get; set; }
+    }
 }

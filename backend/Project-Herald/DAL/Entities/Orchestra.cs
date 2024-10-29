@@ -9,7 +9,9 @@ namespace DAL.Entities
 	public class Orchestra
 	{
 		public string ID { get; set; }
-		// Name of the orchestra
-		// Description of the orchestra
-	}
+        // Name of the orchestra
+        public string Name { get; set; }
+        // Description of the orchestra
+        public string Description { get; set; }
+    }
 }

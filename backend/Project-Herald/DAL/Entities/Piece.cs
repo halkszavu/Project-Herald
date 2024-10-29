@@ -10,8 +10,13 @@ namespace DAL.Entities
 	{
 		public string ID { get; set; }
 		// Title of the piece
+		public string Title { get; set; }
 		// Composer of the piece
-		// Duration of the piece
+		public Composer Composer { get; set; }
+		// Genre of the piece
+		public Genre Genre { get; set; }
+		// Duration of the piece ???
 		// Description of the piece
+		public string Description { get; set; }
 	}
 }
