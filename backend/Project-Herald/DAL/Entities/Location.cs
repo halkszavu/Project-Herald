@@ -10,7 +10,10 @@ namespace DAL.Entities
 	{
 		public string ID { get; set; }
 		// Name of the location
+		public string Name { get; set; }
 		// Address of the location
+		public string Address { get; set; }
 		// Description of the location
+		public string Description { get; set; }
 	}
 }
