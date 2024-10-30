@@ -19,5 +19,7 @@ namespace Bll.Services
 		Task<Concert> GetConcertAsync(string concertId);
 
 		Task<IEnumerable<Concert>> GetConcertsByLocation(Location location);
+
+		Task<IEnumerable<Concert>> GetConcertsBetweenDates(DateTime startDate, DateTime endDate);
 	}
 }
