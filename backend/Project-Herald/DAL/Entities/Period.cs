@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-	public class Period
+    /// <summary>
+    /// Represents a period of music, such as: Baroque, Classical, Romantic, etc.
+    /// </summary>
+    public class Period
 	{
 		public string ID { get; set; }
 		// Name of the era
