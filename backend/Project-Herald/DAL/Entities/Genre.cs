@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    /// <summary>
-    /// Represents a genre of music, such as: opera, symphony, concerto, etc.
-    /// </summary>
-    public class Genre
+	/// <summary>
+	/// Represents a genre of music, such as: opera, symphony, concerto, etc.
+	/// </summary>
+	public class Genre
 	{
 		public string ID { get; set; }
 		// Name of the genre
