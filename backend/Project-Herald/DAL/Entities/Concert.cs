@@ -9,8 +9,9 @@ namespace DAL.Entities
 	public class Concert
 	{
 		public string ID { get; set; }
-		// Location of the concert
-		public Location Location { get; set; }
+        public string Name { get; set; }
+        // Location of the concert
+        public Location Location { get; set; }
 		// Time of the concert (a DateTime of the location)
 		public DateTime Time { get; set; }
 		// Programme of the concert (a list of pieces)
