@@ -1,16 +1,9 @@
 # Use the official .NET SDK for building the project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-WORKDIR /src
-
-COPY ["WebAPI/WebAPI.csproj", "WebAPI/"]
-RUN dotnet restore "WebAPI/WebAPI.csproj"
-
-COPY ["WebAPI/", "WebAPI/"]
-RUN dotnet build "WebAPI/WebAPI.csproj" -c Release -o /build
-
-FROM build as publish
-RUN dotnet publish "WebAPI/WebAPI.csproj" -c Release -o /publish
+WORKDIR /app
+COPY . .
+RUN dotnet restore
+RUN dotnet publish -c Debug -o /out
 
 # Use the ASP.NET Core runtime to run the app
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
