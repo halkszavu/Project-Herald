@@ -58,5 +58,6 @@ namespace Bll.Services
 		/// <param name="period">The specified period</param>
 		/// <returns>A collection of concerts</returns>
 		Task<IEnumerable<Concert>> GetConcertsByPeriodAsync(Period period);
+		Task<IEnumerable<Concert>> GetAllAsync();
 	}
 }
