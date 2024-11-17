@@ -10,7 +10,7 @@ namespace Bll.Services
 	public interface IGenreService
 	{
 		public Task<IEnumerable<Genre>> GetAllAsync();
-		public Task<Genre> CreatePeriodAsync(Genre period);
-		public Task<Genre> UpdatePeriodAsync(Genre period);
+		public Task<Genre> CreateGenreAsync(Genre period);
+		public Task<Genre> UpdateGenreAsync(Genre period);
 	}
 }
