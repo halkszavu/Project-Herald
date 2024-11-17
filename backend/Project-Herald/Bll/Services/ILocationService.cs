@@ -18,6 +18,6 @@ namespace Bll.Services
 		 										
 		Task<Location> GetLocationAsync(string locationId);
 
-		Task<IEnumerable<Location>> GetLocationsByName(string name);
+		Task<IEnumerable<Location>> GetLocationsByNameAsync(string name);
 	}
 }

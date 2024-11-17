@@ -9,7 +9,7 @@ namespace Bll.Services
 {
 	public interface IOrchestraService
 	{
-		public Task<Orchestra> CreatePeriod(Orchestra period);
-		public Task<Orchestra> UpdatePeriod(Orchestra period);
+		public Task<Orchestra> CreatePeriodAsync(Orchestra period);
+		public Task<Orchestra> UpdatePeriodAsync(Orchestra period);
 	}
 }

@@ -10,7 +10,7 @@ namespace Bll.Services
 	public interface IPeriodService
 	{
 		public Task<IEnumerable<Period>> GetAllAsync();
-		public Task<Period> CreatePeriod(Period period);
-		public Task<Period> UpdatePeriod(Period period);
+		public Task<Period> CreatePeriodAsync(Period period);
+		public Task<Period> UpdatePeriodAsync(Period period);
 	}
 }

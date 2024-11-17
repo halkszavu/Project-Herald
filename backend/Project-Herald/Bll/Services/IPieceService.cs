@@ -9,7 +9,7 @@ namespace Bll.Services
 {
 	public interface IPieceService
 	{
-		public Task<Piece> CreatePeriod(Piece period);
-		public Task<Piece> UpdatePeriod(Piece period);
+		public Task<Piece> CreatePeriodAsync(Piece period);
+		public Task<Piece> UpdatePeriodAsync(Piece period);
 	}
 }
