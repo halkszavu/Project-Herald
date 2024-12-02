@@ -15,6 +15,29 @@ namespace Bll.Mocks
 			return Task.FromResult(concert);
 		}
 
+		public Task<IEnumerable<Concert>> GetAllAsync()
+		{
+			return Task.FromResult(new List<Concert>()
+			{
+				new Concert()
+				{
+					ID = "1",
+					Location = new Location()
+					{
+						ID = "1",
+						Name = "Location 1"
+					},
+					Orchestras = [
+						new Orchestra()
+						{
+							ID = "1",
+							Name = "Orchestra 1"
+						}],
+					Time = DateTime.Now,
+				}
+			}.AsEnumerable());
+		}
+
 		public Task<Concert> GetConcertAsync(string concertId)
 		{
 			return Task.FromResult(new Concert()
