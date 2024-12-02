@@ -9,7 +9,7 @@ namespace Bll.Services
 {
 	public interface IComposerService
 	{
-		public Task<Composer> CreateComposerAsync(Composer period);
-		public Task<Composer> UpdateComposerAsync(Composer period);
+		public Task<Composer> CreateComposerAsync(Composer composer);
+		public Task<Composer> UpdateComposerAsync(Composer composer);
 	}
 }
