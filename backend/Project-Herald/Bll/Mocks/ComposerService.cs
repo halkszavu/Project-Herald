@@ -10,7 +10,7 @@ namespace Bll.Mocks
 {
 	public class ComposerService : IComposerService
 	{
-		public Task<Composer> CreateComposerAsync(Composer period)
+		public Task<Composer> CreateComposerAsync(Composer composer)
 		{
 			return Task.FromResult(new Composer()
 			{
@@ -26,9 +26,9 @@ namespace Bll.Mocks
 			});
 		}
 
-		public Task<Composer> UpdateComposerAsync(Composer period)
+		public Task<Composer> UpdateComposerAsync(Composer composer)
 		{
-			return Task.FromResult(period);
+			return Task.FromResult(composer);
 		}
 	}
 }

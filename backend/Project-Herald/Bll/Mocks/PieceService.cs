@@ -12,12 +12,12 @@ namespace Bll.Mocks
 	{
 		public Task<Piece> CreatePieceAsync(Piece period)
 		{
-			throw new NotImplementedException();
+			return Task.FromResult(period);
 		}
 
 		public Task<Piece> UpdatePieceAsync(Piece period)
 		{
-			throw new NotImplementedException();
+			return Task.FromResult(period);
 		}
 	}
 }
