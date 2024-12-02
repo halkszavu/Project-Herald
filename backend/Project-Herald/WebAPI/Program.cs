@@ -1,3 +1,5 @@
+using Bll.Mocks;
+using Bll.Services;
 using DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,8 @@ namespace WebAPI
 			{
 				options.UseNpgsql(builder.Configuration.GetConnectionString("HeraldDataContext"));
 			});
+
+			builder.Services.AddTransient<IConcertService, ConcertService>();
 
 			var app = builder.Build();
 
