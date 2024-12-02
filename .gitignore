@@ -6,3 +6,4 @@
 *.docx
 *.tmp
 
+.vscode/settings.json
