@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+.fixed-column {
+    width: 300px; /* Fixed width */
+    background-color: #d0d0d0; /* Optional styling */
+    padding: 20px; /* Optional styling */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional styling */
+}
+
+.flexible-column {
+    flex: 1; /* Take up remaining space */
+    background-color: #f0f0f0; /* Optional styling */
+    padding: 20px; /* Optional styling */
+}
