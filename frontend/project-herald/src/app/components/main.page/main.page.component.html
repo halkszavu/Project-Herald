@@ -1,8 +1,6 @@
 <div class="container">
     <div class="flexible-column">
-        @for (concert of concerts; track $index) {
-            <app-concert-widget [concert]="concert"></app-concert-widget>
-        }
+        <router-outlet></router-outlet>
     </div>
     <div class="fixed-column">
         <app-sidebar></app-sidebar>

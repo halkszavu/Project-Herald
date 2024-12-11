@@ -1,1 +1,3 @@
-<p>widget-list works!</p>
+@for (concert of concerts; track $index) {
+    <app-concert-widget [concert]="concert"></app-concert-widget>
+}

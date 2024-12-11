@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { MainPageComponent } from './components/main.page/main.page.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { WidgetListComponent } from './components/widget-list/widget-list.component';
 
 export const routes: Routes = [
-    { path: 'main', component: MainPageComponent},
+    { path: 'main', component: WidgetListComponent},
     { path: 'login', component: LoginFormComponent},
 ];
