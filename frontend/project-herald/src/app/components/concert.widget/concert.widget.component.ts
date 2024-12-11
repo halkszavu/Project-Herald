@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 import { Concert } from '../model/concert.model';
 
 @Component({
@@ -11,4 +11,11 @@ import { Concert } from '../model/concert.model';
 export class ConcertWidgetComponent {
   constructor() {}
   @Input() concert: Concert | undefined;
+  @Output() concertClick = new EventEmitter<Concert>();
+
+  onConcertClick() {
+    if(this.concert){
+      
+    }
+  }
 }
