@@ -1,17 +1,29 @@
 <div class="sidebar-content">
-<h4>Sidebar Content</h4>
-<p>Date range</p>
-<mat-form-field>
-    <mat-label>Enter a date range</mat-label>
-    <mat-date-range-input [rangePicker]="picker">
-      <input matStartDate placeholder="Start date">
-      <input matEndDate placeholder="End date">
-    </mat-date-range-input>
-    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-date-range-picker #picker></mat-date-range-picker>
-  </mat-form-field> 
-<p>Location</p>
-<p>Genre</p>
-<p>Period</p>
+    <h4>Sidebar Content</h4>
+    <p>Date range</p>
+    <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date">
+          <input matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field> 
+    <p>Location</p>
+    <p>Genre</p>
+    @for (genre of genres; track genre.name){
+        <label>
+          <input type="checkbox" [(ngModel)]="genre.selected" (change)="onGenreCheckboxChange($event, genre)">
+          {{ genre.name }}
+        </label>
+    }
+    <p>Period</p>
+    @for (period of periods; track period.name){
+        <label>
+          <input type="checkbox" [(ngModel)]="period.selected" (change)="onPeriodCheckboxChange($event, period)">
+          {{ period.name }}
+        </label>
+    }
 </div>
