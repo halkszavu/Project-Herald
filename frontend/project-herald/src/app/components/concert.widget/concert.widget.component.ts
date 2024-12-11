@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 import { Concert } from '../model/concert.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-concert-widget',
@@ -9,13 +10,15 @@ import { Concert } from '../model/concert.model';
   styleUrl: './concert.widget.component.css'
 })
 export class ConcertWidgetComponent {
-  constructor() {}
   @Input() concert: Concert | undefined;
   @Output() concertClick = new EventEmitter<Concert>();
 
+  constructor(private router: Router) {}
+
   onConcertClick() {
     if(this.concert){
-      
+      this.concertClick.emit(this.concert);
+      this.router.navigate(['/concert', this.concert.id]);
     }
   }
 }
