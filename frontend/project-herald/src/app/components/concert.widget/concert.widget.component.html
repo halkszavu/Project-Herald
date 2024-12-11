@@ -1,6 +1,14 @@
 <div class="image-container" (click)="onConcertClick()">
     <img src="assets/images/myImage.png" alt="Sample Image">
     <h2 class="bottom-left">{{concert?.name}}</h2>
-    <h3 class="bottom-right">Lower-Right Text</h3>
-    <p class="top-right">Top-Right Text</p>
+    <h3 class="bottom-right">{{concert?.date}}</h3>
+    <div class="top-right">
+        <ul>
+            @for(piece of concert?.pieces; track $index) {
+                @if($index < 3){
+                    <li><strong>{{ piece.title }}</strong> by {{ piece.composer }}</li>
+                }
+            }
+        </ul>
+    </div>
 </div>
