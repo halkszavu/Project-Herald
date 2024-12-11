@@ -10,5 +10,5 @@ import { MainPageComponent } from "./components/main.page/main.page.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Project Herald';
+  title = 'Concerts';
 }
