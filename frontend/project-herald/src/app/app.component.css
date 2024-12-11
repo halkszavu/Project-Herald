@@ -12,6 +12,14 @@ body, html {
     flex-direction: column;
 }
 
+.name-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 0.75em;
+}
+
 app-herald {
     flex: 1;
     overflow: hidden;
