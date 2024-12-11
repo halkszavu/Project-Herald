@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { Concert } from '../model/concert.model';
 import { ConcertService } from '../../services/concert-service.service';
 
 @Component({
   selector: 'app-concert-details',
-  standalone: true,
-  imports: [],
   templateUrl: './concert-details.component.html',
   styleUrl: './concert-details.component.css'
 })
