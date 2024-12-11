@@ -1,0 +1,10 @@
+<div class = "button-container">
+  <button (click)="toggleSitemap()" > {{ isSitemapVisible ? 'Hide Sitemap' : 'Show Sitemap' }}</button>
+  @if (isSitemapVisible) {
+    <app-navigation></app-navigation>
+  }
+  <button (click)="toggleSelector()" > {{ isSelectorVisible ? 'Hide Selector' : 'Show Selector' }}</button>
+  @if (isSelectorVisible) {
+    <app-selector></app-selector>
+  }
+</div>
