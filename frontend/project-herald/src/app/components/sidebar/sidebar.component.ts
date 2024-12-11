@@ -13,5 +13,5 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-
+  picker: any;
 }
