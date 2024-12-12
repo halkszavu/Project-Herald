@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -8,8 +10,18 @@ import { Component } from '@angular/core';
   styleUrl: './login-form.component.css'
 })
 export class LoginFormComponent {
-  
-  onSubmit() {
-    console.log(this);
+  constructor(public authService: AuthService, public router: Router)  {}
+
+  login() {
+    this.authService.login().subscribe(() => {
+      if(this.authService.isLoggedIn){
+        const redirectUrl = '/main';
+        this.router.navigate([redirectUrl]);
+      }
+    })
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

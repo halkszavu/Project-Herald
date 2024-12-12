@@ -7,4 +7,6 @@
         <li><strong>{{ piece.title }}</strong> by {{ piece.composer }}</li>
     }
 </ul>
-<app-new-piece-form [concert]="concert"></app-new-piece-form>
+@if(authService.isLoggedIn){
+    <app-new-piece-form [concert]="concert"></app-new-piece-form>
+}

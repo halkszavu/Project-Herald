@@ -1,10 +1,15 @@
 <h2>Login</h2>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" formControlName="email">
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" formControlName="password">
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    @if(!authService.isLoggedIn){
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password">
+        </div>
+        <button type="submit" (click)="login()">Login</button>
+    }
+    @else {
+        <button type="button" (click)="logout()">Logout</button>
+    }

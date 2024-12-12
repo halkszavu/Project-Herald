@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Concert } from '../model/concert.model';
 import { ConcertService } from '../../services/concert-service.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-concert-details',
@@ -12,6 +13,7 @@ export class ConcertDetailsComponent {
   concert: Concert | undefined;
 
   constructor(
+    public authService: AuthService,
     private route: ActivatedRoute,
     private concertService: ConcertService,
   ) { }
