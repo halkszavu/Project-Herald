@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-new-concert-form',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './new-concert-form.component.css'
 })
 export class NewConcertFormComponent {
-  
+  submit(form: NgForm){
+    
+  }
 }
