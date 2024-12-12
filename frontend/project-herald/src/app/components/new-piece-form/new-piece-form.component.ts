@@ -29,10 +29,10 @@ export class NewPieceFormComponent {
   }
 
   deletePiece(piece: Piece) {
-    this.concert?.pieces.splice(this.concert.pieces.indexOf(piece), 1);
+    this.concert?.programme.splice(this.concert.programme.indexOf(piece), 1);
   }
 
   getPieces() {
-    return this.concert?.pieces;
+    return this.concert?.programme;
   }
 }

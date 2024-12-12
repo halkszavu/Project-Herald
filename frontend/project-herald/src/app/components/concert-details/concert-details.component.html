@@ -3,7 +3,7 @@
 
 <h3>Pieces</h3>
 <ul>
-    @for (piece of concert?.pieces; track piece.title){
+    @for (piece of concert?.programme; track piece.title){
         <li><strong>{{ piece.title }}</strong> by {{ piece.composer }}</li>
     }
 </ul>

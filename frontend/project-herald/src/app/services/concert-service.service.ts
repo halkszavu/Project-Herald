@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ConcertService {
-  private concertsUrl = "/api/Concert"
+  private concertsUrl = "api/Concert"
 
   constructor(private http: HttpClient) { }
 

@@ -5,7 +5,7 @@ export class Concert {
       public id:string,
       public name:string,
       public date:string,
-      public pieces: Piece[],
+      public programme: Piece[],
       )
     {}
   }
