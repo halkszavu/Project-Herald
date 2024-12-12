@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
-import { LoginFormComponent } from "./components/login-form/login-form.component";
+import { NewConcertFormComponent } from "./components/new-concert-form/new-concert-form.component";
 
 @NgModule({
     declarations: [
-        LoginFormComponent
+        NewConcertFormComponent
     ],
     imports: [
         FormsModule,
@@ -13,4 +13,4 @@ import { LoginFormComponent } from "./components/login-form/login-form.component
     ],
 })
 
-export class LoginModule {}
+export class NewConcertModule {}

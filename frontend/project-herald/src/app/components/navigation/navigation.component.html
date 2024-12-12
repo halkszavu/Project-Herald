@@ -2,4 +2,7 @@
 <ul>
     <li><a routerLink="/main">Home</a></li>
     <li><a routerLink="/login">Login</a></li>
+    @if (authService.isLoggedIn) {
+    <li><a routerLink="/newConcert">Create new concert</a></li>
+    }
 </ul>
