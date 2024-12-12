@@ -1,0 +1,18 @@
+.selector-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add space between elements */
+    padding: 5px; /* Add padding around the content */
+}
+
+.mat-form-field {
+    width: 100%; /* Ensure the form field takes the full width */
+}
+
+h4 {
+    margin-bottom: 10px; /* Add margin below the heading */
+}
+
+p {
+    margin: 10px 0; /* Add margin above and below paragraphs */
+}

@@ -1,0 +1,12 @@
+<h2>{{concert?.name}}</h2>
+<p>Date: {{concert?.date}}</p>
+
+<h3>Pieces</h3>
+<ul>
+    @for (piece of concert?.pieces; track piece.title){
+        <li><strong>{{ piece.title }}</strong> by {{ piece.composer }}</li>
+    }
+</ul>
+@if(authService.isLoggedIn){
+    <app-new-piece-form [concert]="concert"></app-new-piece-form>
+}

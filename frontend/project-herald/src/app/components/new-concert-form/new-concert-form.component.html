@@ -1,0 +1,28 @@
+<h2>Create new concert</h2>
+
+<form #newConcertForm="ngForm" (ngSubmit)="submit(newConcertForm)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <p>This is the main title of the entire concert.</p>
+        <input type="text" class="form-control" id="title" name="title" ngModel required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" ngModel required></textarea>
+    </div>
+    <!--
+    <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" class="form-control" id="imageUrl" name="imageUrl" ngModel required>
+    </div>
+    -->
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" name="date" ngModel required>
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" name="location" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!newConcertForm.valid">Create</button>
+</form>
