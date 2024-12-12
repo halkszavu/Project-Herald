@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './new-concert-form.component.css'
 })
 export class NewConcertFormComponent {
-
+  
 }
