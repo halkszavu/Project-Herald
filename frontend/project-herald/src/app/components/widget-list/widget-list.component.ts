@@ -21,8 +21,13 @@ export class WidgetListComponent {
   }
 
   initConcerts() {
-    this.concertService.getConcerts().subscribe(concerts => {
-      this.concerts = concerts;
-    });
+    this.concertService.getConcerts().subscribe(
+      resp =>{
+        console.log(resp);
+        if(resp.body){
+          this.concerts = resp.body
+        }
+      }
+    )
   }
 }
