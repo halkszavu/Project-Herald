@@ -12,4 +12,8 @@ export class ConcertService {
   getConcert(id: string): Observable<Concert> {
     return of(CONCERTS.filter((t) => t.id === id)[0]);
   }
+
+  getConcerts(): Observable<Concert[]> {
+    return of(CONCERTS);
+  }
 }

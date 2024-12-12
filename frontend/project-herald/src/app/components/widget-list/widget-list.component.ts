@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ConcertWidgetComponent } from "../concert.widget/concert.widget.component";
 import { CONCERTS } from '../model/concert-list';
+import { Concert } from '../model/concert.model';
+import { ConcertService } from '../../services/concert-service.service';
 
 @Component({
   selector: 'app-widget-list',
@@ -10,5 +12,17 @@ import { CONCERTS } from '../model/concert-list';
   styleUrl: './widget-list.component.css'
 })
 export class WidgetListComponent {
-  concerts = CONCERTS;
+  concerts: Concert[] = [];
+
+  constructor(private concertService : ConcertService) {}
+
+  ngOnInit() {
+    this.initConcerts();
+  }
+
+  initConcerts() {
+    this.concertService.getConcerts().subscribe(concerts => {
+      this.concerts = concerts;
+    });
+  }
 }
