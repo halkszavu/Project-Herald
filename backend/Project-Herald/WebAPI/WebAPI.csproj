@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
+	<WebRoot>wwwroot</WebRoot>
   </PropertyGroup>
 
   <ItemGroup>
