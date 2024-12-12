@@ -21,19 +21,8 @@ namespace Bll.Mocks
 			{
 				new Concert()
 				{
-					ID = "1",
-					Location = new Location()
-					{
-						ID = "1",
-						Name = "Location 1"
-					},
-					Orchestras = [
-						new Orchestra()
-						{
-							ID = "1",
-							Name = "Orchestra 1"
-						}],
-					Time = DateTime.Now,
+					ID = "1",					
+					Date = DateTime.Now,
 				}
 			}.AsEnumerable());
 		}
@@ -43,18 +32,7 @@ namespace Bll.Mocks
 			return Task.FromResult(new Concert()
 			{
 				ID = concertId,
-				Location = new Location()
-				{
-					ID = "1",
-					Name = "Location 1"
-				},
-				Orchestras = [
-					new Orchestra()
-					{
-						ID = "1",
-						Name = "Orchestra 1"
-					}],
-				Time = DateTime.Now,
+				Date = DateTime.Now,
 			});
 		}
 
@@ -65,18 +43,7 @@ namespace Bll.Mocks
 				new Concert()
 				{
 					ID = "1",
-					Location = new Location()
-					{
-						ID = "1",
-						Name = "Location 1"
-					},
-					Orchestras = [
-						new Orchestra()
-						{
-							ID = "1",
-							Name = "Orchestra 1"
-						}],
-					Time = DateTime.Now,
+					Date = DateTime.Now,
 				}
 			}.AsEnumerable());
 		}
@@ -88,18 +55,7 @@ namespace Bll.Mocks
 				new Concert()
 				{
 					ID = "1",
-					Location = new Location()
-					{
-						ID = "1",
-						Name = "Location 1"
-					},
-					Orchestras = [
-						new Orchestra()
-						{
-							ID = "1",
-							Name = "Orchestra 1"
-						}],
-					Time = DateTime.Now,
+					Date = DateTime.Now,
 				}
 			}.AsEnumerable());
 		}
@@ -111,14 +67,7 @@ namespace Bll.Mocks
 				new Concert()
 				{
 					ID = "1",
-					Location = location,
-					Orchestras = [
-						new Orchestra()
-						{
-							ID = "1",
-							Name = "Orchestra 1"
-						}],
-					Time = DateTime.Now,
+					Date = DateTime.Now,
 				}
 			}.AsEnumerable()) ;
 		}
@@ -130,14 +79,7 @@ namespace Bll.Mocks
 				new Concert()
 				{
 					ID = "1",
-					Location = new Location()
-					{
-						ID = "1",
-						Name = "Location 1"
-					},
-					Orchestras = [
-						orchestra],
-					Time = DateTime.Now,
+					Date = DateTime.Now,
 				}
 			}.AsEnumerable());
 		}
@@ -149,18 +91,7 @@ namespace Bll.Mocks
 				new Concert()
 				{
 					ID = "1",
-					Location = new Location()
-					{
-						ID = "1",
-						Name = "Location 1"
-					},
-					Orchestras = [
-						new Orchestra()
-						{
-							ID = "1",
-							Name = "Orchestra 1"
-						}],
-					Time = DateTime.Now,
+					Date = DateTime.Now,
 				}
 			}.AsEnumerable());
 		}
