@@ -12,28 +12,17 @@ namespace Bll.Mocks
 	{
 		public Task<Concert> CreateConcertAsync(Concert concert)
 		{
-			return Task.FromResult(concert);
+			return Task.FromResult(StaticData.CreateConcert(concert));
 		}
 
 		public Task<IEnumerable<Concert>> GetAllAsync()
 		{
-			return Task.FromResult(new List<Concert>()
-			{
-				new Concert()
-				{
-					ID = "1",					
-					Date = DateTime.Now,
-				}
-			}.AsEnumerable());
+			return Task.FromResult(StaticData.GetConcerts());
 		}
 
 		public Task<Concert> GetConcertAsync(string concertId)
 		{
-			return Task.FromResult(new Concert()
-			{
-				ID = concertId,
-				Date = DateTime.Now,
-			});
+			return Task.FromResult(StaticData.GetConcert(concertId));
 		}
 
 		public Task<IEnumerable<Concert>> GetConcertsBetweenDatesAsync(DateTime startDate, DateTime endDate)

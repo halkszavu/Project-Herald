@@ -20,6 +20,8 @@ namespace WebAPI.Controllers
 		[HttpGet]
 		public async Task<IEnumerable<Concert>> Get() => await concertService.GetAllAsync();
 
+		public async Task<Concert> Get(string concertId) => await concertService.GetConcertAsync(concertId);
+
 		[HttpPost]
 		public async Task<Concert> Post(Concert concert) => await concertService.CreateConcertAsync(concert);
 	}
