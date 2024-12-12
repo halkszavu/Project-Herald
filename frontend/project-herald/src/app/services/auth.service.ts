@@ -7,12 +7,17 @@ import { Observable, of, tap } from 'rxjs';
 })
 export class AuthService {
   isLoggedIn = false;
+  user : string | null = null;
 
   constructor(private router:Router) { }
 
-  login() : Observable<boolean> {
+  login(username : string, password : string) : Observable<boolean> {
     return of(true).pipe(
-      tap(()=>this.isLoggedIn = true)
+      
+      tap(()=>{
+        this.isLoggedIn = true;
+        this.user = username;
+      })
     );
   }
 
