@@ -31,6 +31,18 @@ namespace Bll.Mocks
 					new Piece { ID = "tschaikowsky_nutcracker_suite", Title = "The Nutcracker Suite", Composer = "Pjotr Iljics Tschaikowsky" },
 				}
 			},
+			new Concert { ID = "2", Name = "Tavaszi koncert", Date = new DateTime(2025, 4, 2), Programme = new List<Piece>() },
+			new Concert { ID = "3", Name = "Fonyódi koncert 1", Date = new DateTime(2025, 7, 27), Programme = new List<Piece>() },
+			new Concert { ID = "4", Name = "Fonyódi koncert 2", Date = new DateTime(2025, 7, 28), Programme = new List<Piece>() },
+			new Concert { ID = "5", Name = "Fonyódi koncert 3", Date = new DateTime(2025, 7, 29), Programme = new List<Piece>() },
+			new Concert { ID = "6", Name = "Fonyódi koncert 4", Date = new DateTime(2025, 7, 30), Programme = new List<Piece>() },
+			new Concert { ID = "7", Name = "Fonyódi koncert 5", Date = new DateTime(2025, 7, 31), Programme = new List<Piece>() },
+			new Concert { ID = "8", Name = "Fonyódi koncert 6", Date = new DateTime(2025, 8, 1), Programme = new List<Piece>() },
+			new Concert { ID = "9", Name = "Fonyódi koncert 7", Date = new DateTime(2025, 8, 2), Programme = new List<Piece>() },
+			new Concert { ID = "10", Name = "Fonyódi koncert 8", Date = new DateTime(2025, 8, 3), Programme = new List<Piece>() },
+			new Concert { ID = "11", Name = "Fonyódi koncert 9", Date = new DateTime(2025, 8, 4), Programme = new List<Piece>() },
+			new Concert { ID = "12", Name = "Fonyódi koncert 10", Date = new DateTime(2025, 8, 5), Programme = new List<Piece>() },
+			new Concert { ID = "13", Name = "Fonyódi koncert 11", Date = new DateTime(2025, 8, 6), Programme = new List<Piece>() },
 		};
 
 		public static IEnumerable<Concert> GetConcerts()
@@ -51,6 +63,22 @@ namespace Bll.Mocks
 			}
 			concerts.Add(concert);
 			return concert;
+		}
+
+		public static Concert UpdateConcert(Concert concert)
+		{
+			var existing = concerts.FirstOrDefault(c => c.ID == concert.ID);
+			if(existing != null)
+			{
+				existing.Name = concert.Name;
+				existing.Date = concert.Date;
+				existing.Programme = concert.Programme;
+			}
+			else
+			{
+				existing = CreateConcert(concert);
+			}
+			return existing;
 		}
 	}
 }
