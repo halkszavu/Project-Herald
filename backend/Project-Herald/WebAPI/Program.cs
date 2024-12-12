@@ -22,14 +22,17 @@ namespace WebAPI
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
 
-			builder.Services.AddDbContext<HeraldDataContext>(options =>
-			{
-				options.UseNpgsql(builder.Configuration.GetConnectionString("HeraldDataContext"));
-			});
+			//builder.Services.AddDbContext<HeraldDataContext>(options =>
+			//{
+			//	options.UseNpgsql(builder.Configuration.GetConnectionString("HeraldDataContext"));
+			//});
 
 			builder.Services.AddTransient<IConcertService, ConcertService>();
 
 			var app = builder.Build();
+
+			app.UseDefaultFiles();
+			app.UseStaticFiles();
 
 			// Configure the HTTP request pipeline.
 			if(app.Environment.IsDevelopment())

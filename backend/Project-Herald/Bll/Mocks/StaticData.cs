@@ -30,7 +30,7 @@ namespace Bll.Mocks
 					new Piece { ID = "tschaikowsky_swanlake_suite", Title = "Swan Lake Suite", Composer = "Pjotr Iljics Tschaikowsky" },
 					new Piece { ID = "tschaikowsky_nutcracker_suite", Title = "The Nutcracker Suite", Composer = "Pjotr Iljics Tschaikowsky" },
 				}
-			}
+			},
 		};
 
 		public static IEnumerable<Concert> GetConcerts()
