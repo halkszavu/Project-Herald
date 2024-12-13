@@ -54,18 +54,18 @@ namespace Bll.Mocks
 						new Piece { ID = "shostakovich_concerto", Title = "Piano Concerto No. 2", Composer = "Dmitri Shostakovich" },
 					}
 				},
-				new Concert() { ID = "fonyod1", Name = "Fonyódi koncert 1", Date = new DateTime(2025, 7, 27), Programme = [] },
-				new Concert() { ID = "fonyod2", Name = "Fonyódi koncert 2", Date = new DateTime(2025, 7, 28), Programme = [] },
-				new Concert() { ID = "fonyod3", Name = "Fonyódi koncert 3", Date = new DateTime(2025, 7, 29), Programme = [] },
-				new Concert() { ID = "fonyod4", Name = "Fonyódi koncert 4", Date = new DateTime(2025, 7, 30), Programme = [] },
-				new Concert() { ID = "fonyod5", Name = "Fonyódi koncert 5", Date = new DateTime(2025, 7, 31), Programme = [] },
-				new Concert() { ID = "fonyod6", Name = "Fonyódi koncert 6", Date = new DateTime(2025, 8, 1), Programme = [] },
-				new Concert() { ID = "fonyod7", Name = "Fonyódi koncert 7", Date = new DateTime(2025, 8, 2), Programme = [] },
-				new Concert() { ID = "fonyod8", Name = "Fonyódi koncert 8", Date = new DateTime(2025, 8, 3), Programme = [] },
-				new Concert() { ID = "fonyod9", Name = "Fonyódi koncert 9", Date = new DateTime(2025, 8, 4), Programme = [] },
+				new Concert() { ID = "fonyod1", Name = "Fonyódi koncert 1", Date = new DateTime(2025, 7, 27), Programme = fonyodi },
+				new Concert() { ID = "fonyod2", Name = "Fonyódi koncert 2", Date = new DateTime(2025, 7, 28), Programme = fonyodi },
+				new Concert() { ID = "fonyod3", Name = "Fonyódi koncert 3", Date = new DateTime(2025, 7, 29), Programme = fonyodi },
+				new Concert() { ID = "fonyod4", Name = "Fonyódi koncert 4", Date = new DateTime(2025, 7, 30), Programme = fonyodi },
+				new Concert() { ID = "fonyod5", Name = "Fonyódi koncert 5", Date = new DateTime(2025, 7, 31), Programme = fonyodi },
+				new Concert() { ID = "fonyod6", Name = "Fonyódi koncert 6", Date = new DateTime(2025, 8, 1), Programme = fonyodi },
+				new Concert() { ID = "fonyod7", Name = "Fonyódi koncert 7", Date = new DateTime(2025, 8, 2), Programme = fonyodi },
+				new Concert() { ID = "fonyod8", Name = "Fonyódi koncert 8", Date = new DateTime(2025, 8, 3), Programme = fonyodi },
+				new Concert() { ID = "fonyod9", Name = "Fonyódi koncert 9", Date = new DateTime(2025, 8, 4), Programme = fonyodi },
 				new Concert() {
 					ID = "filmzene", Name = "Filmzene koncert", Date = new DateTime(2024, 12, 29),
-					Programme =
+					Programme = new List<Piece>()
 					{
 						new Piece { ID="Bradley_TomAndJerry", Title="Tom and Jerry", Composer="Bradley" },
 						new Piece { ID="Menken_Aladdin", Title="Aladdin", Composer="Alan Menken" },

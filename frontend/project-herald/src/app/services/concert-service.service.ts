@@ -13,7 +13,8 @@ export class ConcertService {
   constructor(private http: HttpClient) { }
 
   getConcert(id: string): Observable<Concert> {
-    return of(CONCERTS.filter((t) => t.id === id)[0]);
+    console.log(`${this.concertsUrl}/${id}`);
+    return this.http.get<Concert>(`${this.concertsUrl}/${id}`);
   }
 
   getConcerts(){
