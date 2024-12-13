@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace WebAPI.Controllers
 {
@@ -10,7 +10,7 @@ namespace WebAPI.Controllers
 		[HttpPost]
 		public IActionResult Post([FromBody] LoginRequest request)
 		{
-			if(request.Username == "admin" && request.Password == "admin")
+			if(Logins.ContainsKey(request.Username) && Logins[request.Username] == request.Password)
 			{
 				return Ok(new LoginResponse { Token = "token" });
 			}
@@ -19,6 +19,13 @@ namespace WebAPI.Controllers
 				return Unauthorized();
 			}
 		}
+
+		private Dictionary<string, string> Logins = new()
+		{
+			{ "admin", "admin" },
+			{ "user", "user" },
+			{ "numeric", "1234" },
+		};
 	}
 
 	public class LoginRequest
