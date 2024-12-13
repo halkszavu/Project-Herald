@@ -17,9 +17,9 @@ namespace DAL.Entities
 		[Required]
 		public string Composer { get; set; }
 		// Genre of the piece
-		public string Genre { get; set; }
+		//public string Genre { get; set; }
 		// Duration of the piece ???
 		// Description of the piece
-		public string Description { get; set; }
+		//public string Description { get; set; }
 	}
 }

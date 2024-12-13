@@ -7,6 +7,6 @@
         <li><strong>{{ piece.title }}</strong> by {{ piece.composer }}</li>
     }
 </ul>
-@if(authService.isLoggedIn){
+@if(!authService.isLoggedIn){
     <app-new-piece-form [concert]="concert"></app-new-piece-form>
 }

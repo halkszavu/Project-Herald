@@ -19,4 +19,12 @@ export class ConcertService {
   getConcerts(){
     return this.http.get<Concert[]>(this.concertsUrl, {observe: 'response'});
   }
+
+  addConcert(concert: Concert){
+    return this.http.post<Concert>(this.concertsUrl, concert);
+  }
+
+  updateConcert(concert: Concert){
+    return this.http.put<Concert>(this.concertsUrl, concert, {observe: 'response'});
+  }
 }
