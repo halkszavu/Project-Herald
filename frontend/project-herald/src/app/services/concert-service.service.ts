@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { CONCERTS } from '../../app/components/model/concert-list';
 import { Concert } from '../components/model/concert.model';
 import { HttpClient } from '@angular/common/http';
 

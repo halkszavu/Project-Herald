@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable, of, tap } from 'rxjs';
 
 @Injectable({
@@ -8,15 +8,19 @@ import { Observable, of, tap } from 'rxjs';
 export class AuthService {
   isLoggedIn = false;
   user : string | null = null;
+  private loginUrl = "api/Login";
 
-  constructor(private router:Router) { }
+  constructor(private http: HttpClient) { }
 
   login(username : string, password : string) : Observable<boolean> {
-    return of(true).pipe(
-      
-      tap(()=>{
-        this.isLoggedIn = true;
-        this.user = username;
+    const payload = { username, password };
+
+    return this.http.post<boolean>(this.loginUrl, payload).pipe(
+      tap((response) => {
+        if (response) {
+          this.isLoggedIn = true;
+          this.user = username;
+        }
       })
     );
   }
