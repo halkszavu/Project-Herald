@@ -7,6 +7,15 @@ export class Concert {
       public date:string,
       public programme: Piece[],
       )
-    {}
+    {
+      if(id === ''){
+        this.id = this.generateId();
+      }
+    }
+
+    generateId(){
+      let r = Math.floor(Math.random() * 500);
+      return `${this.name}${r}`;
+    }
   }
   

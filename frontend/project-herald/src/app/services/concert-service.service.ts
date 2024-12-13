@@ -21,7 +21,8 @@ export class ConcertService {
   }
 
   addConcert(concert: Concert){
-    return this.http.post<Concert>(this.concertsUrl, concert);
+    console.log(concert);
+    return this.http.post<Concert>(this.concertsUrl, concert, {observe: 'response'});
   }
 
   updateConcert(concert: Concert){
