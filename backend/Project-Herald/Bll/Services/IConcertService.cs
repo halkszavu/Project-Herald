@@ -59,5 +59,7 @@ namespace Bll.Services
 		/// <returns>A collection of concerts</returns>
 		Task<IEnumerable<Concert>> GetConcertsByPeriodAsync(Period period);
 		Task<IEnumerable<Concert>> GetAllAsync();
+
+		public Task<Concert> UpdateConcertAsync(Concert concert);
 	}
 }

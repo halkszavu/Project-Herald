@@ -25,5 +25,8 @@ namespace WebAPI.Controllers
 
 		[HttpPost]
 		public async Task<Concert> Post(Concert concert) => await concertService.CreateConcertAsync(concert);
+
+		[HttpPut]
+		public async Task<Concert> Put(Concert concert) => await concertService.UpdateConcertAsync(concert);
 	}
 }
