@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -7,6 +8,9 @@ import { NgForm } from '@angular/forms';
   styleUrl: './new-concert-form.component.css'
 })
 export class NewConcertFormComponent {
+
+  constructor(private http : HttpClient) { }
+
   submit(form: NgForm){
     
   }
